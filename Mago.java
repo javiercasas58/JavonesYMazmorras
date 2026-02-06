@@ -1,8 +1,11 @@
+package javanesYmazmoras;
+
 public class Mago extends Personaje {
 
     private int mana;
 
-    public Mago(int manaInicial) {
+    public Mago(String nombre, int nivel, int puntosVida, boolean protegido,int manaInicial) {
+    	super(nombre, nivel, puntosVida, protegido);
         this.mana = manaInicial;
     }
 
