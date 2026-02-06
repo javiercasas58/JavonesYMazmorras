@@ -1,16 +1,23 @@
+package javanesYmazmoras;
+
 public class Guerrero extends Personaje {
 
-    private Personaje compañeroProtegido;
+    private Personaje companeroProtegido;
+    
+    public Guerrero(String nombre, int nivel, int puntosVida, boolean protegido, Personaje companeroProtegido) {
+    	super(nombre,nivel,puntosVida,protegido);
+    	this.companeroProtegido=companeroProtegido;
+    }
 
     public void proteger(Personaje compañero) {
-        this.compañeroProtegido = compañero;
+        this.companeroProtegido = compañero;
     }
 
     public void dejarDeProteger() {
-        this.compañeroProtegido = null;
+        this.companeroProtegido = null;
     }
 
     public Personaje estaProtegiendo() {
-        return compañeroProtegido;
+        return companeroProtegido;
     }
 }
