@@ -1,16 +1,18 @@
+package javanesYmazmoras;
 
-public class personaje {
+public class Personaje {
 	private String nombre = "";
 	private int nivel = 0;
 	private int puntosVida = 0;
 	private boolean protegido = false;
-	private inventario inventario;
+	private Inventario inventario;
 	
-	public personaje(String nombre, int nivel, int puntosVida, boolean protegido) {
+	public Personaje(String nombre, int nivel, int puntosVida, boolean protegido) {
 		this.nombre = nombre;
 		this.nivel = nivel;
 		this.puntosVida = puntosVida;
 		this.protegido = protegido;
+		this.inventario = new Inventario();
 	}
 	
 
@@ -32,11 +34,11 @@ public class personaje {
 		if (cantidad > 0) puntosVida = puntosVida+cantidad;
 		else System.out.println("Cantidad incorrrecta");
 	}
-	public inventario getInventario() {
+	public Inventario getInventario() {
 		return inventario;
 	}
-	public void agragarEquipamiento(equipamiento equipamiento) {
-		inventario.add(equipamiento);
+	public void agregarEquipamiento(Equipamiento equipamiento) {
+		inventario.agregarEquipamiento(equipamiento);
 	}
 	public void setProtegido(boolean protegido) {
 		if (protegido==true) this.protegido=true;
