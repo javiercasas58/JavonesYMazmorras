@@ -1,3 +1,5 @@
+package javanesYmazmoras;
+
 public class Equipamiento {
 
     private String nombre;
@@ -14,5 +16,9 @@ public class Equipamiento {
 
     public String getTipo() {
         return tipo;
+    }
+   
+    public String toString() {
+        return nombre + " (" + tipo + ")";
     }
 }

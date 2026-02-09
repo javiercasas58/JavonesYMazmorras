@@ -16,7 +16,7 @@ public class Personaje {
 	}
 	
 
-	public void mostrarInfo(String nombre, int nivel, int puntosVida) {
+	public void mostrarInfo() {
 		System.out.println("Su nombre es " + nombre + " su nivel es " + nivel + " sus puntos de vida son " + puntosVida);
 	}
 
@@ -41,8 +41,7 @@ public class Personaje {
 		inventario.agregarEquipamiento(equipamiento);
 	}
 	public void setProtegido(boolean protegido) {
-		if (protegido==true) this.protegido=true;
-		else this.protegido=false;
+		  this.protegido = protegido;
 	}
 	public boolean estaProtegido() {
 		return this.protegido;
